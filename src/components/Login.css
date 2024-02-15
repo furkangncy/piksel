@@ -1,0 +1,123 @@
+/* Temel stil ayarlamaları */
+body {
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-container {
+  max-width: 600px;
+  margin: 70px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  padding: 8px;
+  margin: 8px auto;
+  border: 2px solid #ced4da;
+  border-radius: 5px;
+  width: calc(100% - 16px);
+  display: block;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Kullanıcı Girişi başlığı için animasyon */
+.glowing-title {
+  color: #0b0606;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  animation: pulse 2s infinite;
+}
+
+/* Pulse animasyonu */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 4px #fff;
+  }
+  50% {
+    text-shadow: 0 0 20px #007bff, 0 0 30px #007bff, 0 0 40px #007bff;
+  }
+  100% {
+    text-shadow: 0 0 4px #fff;
+  }
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"], button {
+    width: calc(100% - 20px);
+  }
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Kırmızı */
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.alert-danger {
+  background-color: #f44336; /* Daha spesifik bir kırmızı tonu için */
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"], button {
+    width: calc(100% - 20px);
+  }
+}
+
+
+/* Hata mesajı animasyonu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Kırmızı */
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease-out; /* Animasyonu burada uygulayın */
+}
+
+
+.login-title {
+  font-size: 40px; /* veya tercihinize göre */
+  font-weight: bold; /* Kalın yazı tipi */
+  text-align: center; /* Başlığı ortala */
+  margin-bottom: 20px; /* Altındaki öğelerle arasında boşluk bırak */
+}
